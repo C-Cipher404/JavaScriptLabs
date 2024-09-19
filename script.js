@@ -6,3 +6,4 @@ function factorial(n) {
 }
 let n = 67;
 console.log(`Factorial of ${n} is ${factorial(n)}`);
+
