@@ -4,23 +4,10 @@ function factorial(n) {
   }
   return n * factorial(n - 1);
 }
-let n = 67;
-console.log(`Factorial of ${n} is ${factorial(n)}`);
 
-
-function addBidsToElement(bids) {
-  const element = document.getElementById('1');
-  if (!element) {
-    console.error("Element with ID '1' not found.");
-    return;
-  }
-  element.innerHTML = '';
-  bids.forEach(bid => {
-
- const bidItem = document.createElement('p');  
-    bidItem.textContent = bid;
-    element.appendChild(bidItem);
-  });
+function displayFactorial() {
+  let n = document.getElementById('numberInput').value;
+  let result = factorial(Number(n)); 
+  document.getElementById('factorialResult').textContent = `Factorial of ${n} is ${result}`;
 }
-const bidsArray = ['Bid 1', 'Bid 2', 'Bid 3'];
-addBidsToElement(bidsArray);
+
